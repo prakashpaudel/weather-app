@@ -1,7 +1,11 @@
 var React = require('react');
 var GetCity = require('../components/GetCity');
+var api = require('../helpers/api');
 
 var GetCityContainer = React.createClass({
+	contextTypes: {
+		router: React.PropTypes.object.isRequired
+	},
 	getInitialState: function () {
 		return {
 			city: ''
@@ -14,10 +18,8 @@ var GetCityContainer = React.createClass({
 	},
 	handleSubmitCity: function(e) {
 		e.preventDefault();
-		var city = this.state.city;
-		this.setState({
-			city: ''
-		});
+		this.context.router.push('/forecast/' + this.state.city);
+
 	},
 	render: function() {
 		return (
