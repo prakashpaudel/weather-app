@@ -23,7 +23,7 @@ var styles = {
 function Home (props) {
 	return (
 		<div style={styles.container}>
-			<h1 style={styles.header}>Enter a City and State</h1>
+			<h1 style={styles.header}>Enter a City</h1>
 			<GetCityContainer />
 		</div>
 	)

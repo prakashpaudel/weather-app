@@ -26,7 +26,6 @@ var ForecastContainer = React.createClass({
 					isLoading: false,
 					forecastData: data
 				})
-				console.log(data)
 			}.bind(this))
 	},
 	handleClick: function (weather) {
