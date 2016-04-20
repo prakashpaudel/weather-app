@@ -1,6 +1,5 @@
 var React = require('react');
 var GetCityContainer = require('../containers/GetCityContainer');
-
 var styles = {
   container: {
     width: '100%',
@@ -20,8 +19,8 @@ var Main = React.createClass ({
 	render: function() {
 		return (
 			<div style={styles.container}>
-				<div style={styles.header}>
-					<h2 style={{margin: 0}}>Weather Worldwide</h2>
+				<div className="nav-main" style={styles.header}>
+					<h2 className="title" style={{margin: 0}}>Weather Worldwide</h2>
           <GetCityContainer direction='row' />
 				</div>
 				{this.props.children}
